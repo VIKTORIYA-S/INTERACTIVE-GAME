@@ -71,7 +71,7 @@ span {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 255, 1);
+  background-color: rgba(0, 0, 255, 0);
   cursor: pointer; /* теперь можно кликать */
 }
 
