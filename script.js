@@ -45,7 +45,6 @@ if (foundCount === total) {
   document.querySelectorAll('.green_circle').forEach(el => el.remove());
     }, 500);
 }
-
   });
 });
 
@@ -71,3 +70,22 @@ document.querySelector('.container').appendChild(resetBtn);
 resetBtn.addEventListener('click', resetGame);
 
 
+const image2 = document.querySelector('.image_2');
+
+image2.addEventListener('click', (event) => {
+    clickAudio.currentTime = 0; // сброс на начало
+    clickAudio.play();
+        const loose = document.createElement('img');
+        loose.classList.add('loose');
+        loose.src = 'assets/img/крестик.png';
+
+        loose.style.position = 'absolute';
+        loose.style.left = event.clientX-25 + 'px';
+        loose.style.top = event.clientY-25 + 'px';
+
+        document.body.appendChild(loose);
+       // удаление через 2 секунды
+        setTimeout(() => {
+            loose.remove();
+        }, 1000);
+});
