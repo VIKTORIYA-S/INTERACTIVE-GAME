@@ -1,39 +1,69 @@
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   text-align: center;
   background-color: #f5f5f5;
 }
 
 .container {
-  height: 100vh;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 h3 {
   font-size: 24px;
   color: #519b8f;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 h1 {
   font-size: 48px;
   color: #c808c8;
-  margin-bottom: 20px;
+  margin: 0;
+}
+
+span {
+  font-size: 32px;
+  color: #c808c8;
 }
 
 .game {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
+@media screen and (max-width: 670px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+.p {
+  font-size: 18px;
+  color: #519b8f;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
 
 .game_image_2 {
   position: relative;
+}
+
+@media screen and (max-width: 520px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .image {
+    width: 320px;
+    margin: auto;
+  }
 }
 
 .circle {
@@ -41,7 +71,7 @@ h1 {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 255, 0);
+  background-color: rgba(0, 0, 255, 1);
   cursor: pointer; /* теперь можно кликать */
 }
 
@@ -52,27 +82,41 @@ h1 {
 }
 
 /* координаты */
-.circle_1 { top: 30px; left: 140px; }
-.circle_2 { top: 40px; left: 350px; }
-.circle_3 { top: 80px; left: 55px; }
-.circle_4 { top: 150px; left: 110px; }
-.circle_5 { top: 145px; left: 445px; }
-.circle_6 { top: 260px; left: 62px; }
-.circle_7 { top: 160px; left: 280px; }
-.circle_8 { top: 300px; left: 390px; }
+.circle_1 { top: 60px; left: 140px; }
+.circle_2 { top: 70px; left: 350px; }
+.circle_3 { top: 110px; left: 55px; }
+.circle_4 { top: 180px; left: 110px; }
+.circle_5 { top: 175px; left: 445px; }
+.circle_6 { top: 290px; left: 62px; }
+.circle_7 { top: 205px; left: 280px; }
+.circle_8 { top: 330px; left: 390px; }
+
+@media screen and (max-width: 520px) {
+  .circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .circle_1 { top: 50px; left: 85px; }
+  .circle_2 { top: 60px; left: 215px; }
+  .circle_3 { top: 90px; left: 30px; }
+  .circle_4 { top: 125px; left: 60px; }
+  .circle_5 { top: 120px; left: 270px; }
+  .circle_6 { top: 190px; left: 35px; }
+  .circle_7 { top: 140px; left: 170px; }
+  .circle_8 { top: 210px; left: 235px; }
+}
 
 .counter {
-  margin-top: 20px;
   font-size: 40px;
   color: #c808c8;
   font-weight: bold;
 }
 
 .reset-btn {
-  margin-top: 20px;
   padding: 10px 20px;
   font-size: 32px;
-  background-color: #3c9fb5e1;
+  background-color: #519b8f;
   color: white;
   border: none;
   border-radius: 5px;
