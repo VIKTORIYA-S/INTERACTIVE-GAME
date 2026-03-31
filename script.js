@@ -62,6 +62,7 @@ document.querySelector('.container').appendChild(counter);
 // создаём объект Audio заранее
 const clickSound = new Audio('assets/audio/щелчок.mp3');
 const winSound = new Audio('assets/audio/вау.mp3');
+const clickAudio = new Audio('assets/audio/упс.mp3');
 
 circles.forEach(circle => {
   circle.addEventListener('click', () => {
@@ -94,9 +95,11 @@ circles.forEach(circle => {
 //     }
 
 if (foundCount === total) {
-  counter.textContent = 'Вітаю! Ви знайшли всі відмінності!';
+    setTimeout(() => {
+        counter.textContent = 'Вітаю! Ви знайшли всі відмінності!';
     winSound.play();
   document.querySelectorAll('.green_circle').forEach(el => el.remove());
+    }, 500);
 }
 
   });
